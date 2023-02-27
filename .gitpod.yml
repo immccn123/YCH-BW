@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - name: Install Deps
+    command: |
+      sudo apt install libgirepository1.0-dev
+    
+ports:
+    # vnc
+  - port: 6080
+    onOpen: open-preview
