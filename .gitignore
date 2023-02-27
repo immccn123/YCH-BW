@@ -67,3 +67,5 @@ django/
 
 # Briefcase log files
 logs/
+
+*.dist-info/
