@@ -69,3 +69,4 @@ django/
 logs/
 
 *.dist-info/
+*.log
