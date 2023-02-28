@@ -1,10 +1,13 @@
-import sys
 import getopt
+import sys
 
-from yangcong_tools.utils import *
-from yangcong_tools.constants import *
+from .constants import *
+from .utils import *
 
-def run():
+
+def run(messageq: Queue):
+    global message_queue
+    message_queue = messageq
     homework = get_unfinished_homework()
     exp_hm = get_expired_homework()
     homework: list = homework['homeworkList'] + exp_hm['homeworkList']

@@ -1,6 +1,17 @@
 import time
+from queue import Queue
 
-from yangcong_tools.api import *
+from .api import *
+
+message_queue: Queue
+
+def print(*values: object,
+         sep: str = " ",
+         end: str = "\n",
+    ):
+    s = sep.join(values) + end;
+    message_queue.put(s)
+
 
 def bug_report(msg, **kwargs):
     print('\n\n\n')

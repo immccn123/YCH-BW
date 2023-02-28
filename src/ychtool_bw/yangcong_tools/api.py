@@ -38,7 +38,8 @@ def login(username, password):
         json={
             'name': username,
             'password': password,
-        }
+        },
+
     )
     # print(password, 'endl')
     if ctx.status_code != 200:
